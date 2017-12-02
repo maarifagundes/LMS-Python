@@ -1,0 +1,55 @@
+/*Mari Fagundes*/
+.prop{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width:300px;
+	height:150px;
+}
+
+.foto{
+	width:100px;
+}
+.ext{
+	position: relative;
+	width: 250px;
+	height: 150px;
+}
+
+@media only screen and (max-width : 350px) {
+	h1{
+		text-align: center;
+		overflow: hidden;
+	}
+	body{
+		font-size: 70%;
+		text-align: center;
+	}
+	.prop{
+		width: 70%;
+		height: 70%;
+	}
+	.ext{
+	position: relative;
+	width: 85%;
+	height: 10em;
+	}
+}
+
+@media only screen and (max-width : 768px) {
+	h1{
+		text-align: center;
+		overflow: hidden;
+	}
+	body{
+		text-align: center;
+
+		}
+	}
+	.ext{
+	position: relative;
+	height: 10em;
+
+	}
+
+}

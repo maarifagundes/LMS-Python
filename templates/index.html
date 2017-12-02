@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'titulo' %}HOMEPAGE{% endblock %}
+{% block 'conteudo' %} 
+<link rel="stylesheet" type="text/css" href="/static/css/index.css"/>       
+	<div>
+		<h3>Sobre a Faculdade</h3>
+		<p> A Faculdade Brasil Tecnologia foi fundada em 2017 por um grupo de jovens professores com a missão de formar profissionais qualificados, oferecendo cursos voltados a área de T.I, Adminstração, Banco de Dados e outros. Estamos sempre atentos as mudanças do mercado atual, reunindo informações diversas para manter nossos cursos sempre atualizados, nossas aulas são 100% práticas para que você possa aplicar todo o conhecimento adquirido.
+		</br>Não perca tempo, venha para a FBT! Acreditamos que com essa nossa metodologia e qualidade junto com a sua dedicação podemos ser reconhecidos no ENADE MEC</p>
+	</div>
+
+	<div>
+		<img class="prop" src="{%static 'img/prop.png' %}" width="500" height="300" alt="Propaganda da pagina"/>
+		<h4> Opiniões dos alunos </h4>	
+		<p><br/><img src='/static/img/aluna.jpg' width='100px' alt="Foto aluna Rebeca"/>
+		Rebeca:Faculdade com corpo docente competente, e os cursos são de ótima qualidade</p>
+			
+		
+		<p><br/><img src='/static/img/aluna1.jpg' width='100px' alt="Foto aluna Amanda"/>
+		Amanda:Consegui me formar no curso de ADS através desta faculdade, e hoje estou trabalhando na área, os cursos são ótimos.</p>
+
+		<p><br/><img src='/static/img/aluno2.png' width='80px' alt="Foto aluno Carlos"/>
+		Carlos:Infra estrutura muito boa, o atendimente é exelente</p>
+
+
+		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+		<a href="http://sisfiesportal.mec.gov.br/" </a><img src='/static/img/fies.jpg' width='350px' height="200" alt="FIES"/></a>
+		<a href="http://siteprouni.mec.gov.br/" </a><img src='/static/img/prouni.png' width='350px' height="200" alt="Pro Uni"/></a>
+		<a href="https://querobolsa.com.br" </a><img src='/static/img/bolsa.jpg' width='350px' height="200" alt="Quero Bolsa"/></a>
+	</div>
+	<h1>{{ faculdade | upper }}</h1>
+	<nav>
+		{% if not logado %}
+			<a href="/login">Login</a>
+		{% else %}
+			<span>Olá {{ usuario }}</span>
+		{% endif %}
+	</nav>
+	<h2> LISTAS CURSOS</h2>
+	<ul>
+		{% for curso in cursos %}
+			{% if curso.ativo %}
+				<li class="{{ curso.tipo }}"> {{ curso.nome }}</li>
+			{% endif %}
+		{% endfor %}
+
+
+	</ul>
+{% endblock %}

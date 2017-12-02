@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'conteudo' %} 
+
+<h2>Contato</h2>
+<form>
+	<label for = "Email">E-mail</label>:<br>
+	<input type= "email" name ="txtEmail"><br>
+
+	<label for = "lblnome">Nome completo</label>:<br>
+	<input type= "text" name ="Nome"><br>
+	
+	<label for = "DurAula">Duração da aula em horas</label>:<br>
+	<input type= "number" name ="numDurAul"><br>
+
+	<label>Assunto:</label><br>
+	
+	<select name="Cursos">
+		<option>Selecione</option>
+		<option value="ProbVT">Problemas com Vale Transporte</option>
+		<option value="ProbAA">Problemas com Area do Aluno</option>
+		<option value="Reclamações">Reclamações</option>
+		<option value="Sugestões">Sugestões</option>
+		<option value="ProbAA">Problemas com Area do Aluno</option>
+	</select><br>
+
+    <label for = "ementa">Ementa (Ou Conteúdo resumido)</label>:<br>
+    <textarea>Insira conteúdo aqui:</textarea><br/>
+
+    <button type="submit" value="btnEnviar">Confirmar</button>
+</form>
+
+{% endblock %}

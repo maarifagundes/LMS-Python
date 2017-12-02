@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'conteudo' %}
+
+<h2>Login</h2>
+
+<form>
+	<label for = "lblUsu"> Nome de usuario</label>:<br>
+	<input type= "text" name ="txtUsu"><br>
+
+	<label for = "lblSenha"> Senha</label>:<br>
+	<input type= "password" name ="txtSeha"><br/><br/>
+
+	<a href="EsqueciSenha.html"> Esqueceu a senha?</label> </a><br><br/>
+
+	<button type="submit" value="btnSubmit"> Login </button>
+	<button type="button" value="btnCancelar"> Cancelar </button><br>
+
+	<input type ="checkbox" value="ctkLembrar" id="Lembrar"><label for="Lembrar">Lembrar de mim?</label><br>
+
+</form>
+
+{% endblock %}

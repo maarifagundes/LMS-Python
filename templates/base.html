@@ -1,0 +1,47 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="author" content="André Sousa - RA 1700575">
+	<meta name="author" content="Lucas Lavor - RA 1700539">
+	<meta name="author" content="Evandro Ferraz - RA 1700553">
+	<meta name="author" content="Eduardo Correia - RA 1700576">
+   	<meta name="author" content="Mariana Fagundes - RA 1701470">
+	<meta name="author" content="Gabriel Alves Pereira - RA 1700547">
+
+	<title>FBT-Faculdade Brasil Tecnologia</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/static/css/classe.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header>
+		<img src="{% static 'img/fbt.jpg' %}" alt="Faculdade Brasil Tecnologia"> 
+	</header>
+	<div class="menu">
+		{% if user.is_authenticated %}
+			<a href="{% url 'sair' %}">Logoff/</a>
+			<a href="/aluno">Aluno/</a>
+			Olá {{ user }}
+		{% else %}
+			<a href="{% url 'login' %}">Login/</a>
+		{% endif %}
+		<a href="/index">Index/</a>
+		<a href="/cursos">Nossos Cursos</a> / 
+		<a href ="/noticias">Notícias</a> /
+		<a href="/login">Login/</a>
+		<a href="/novocurso">Novo Curso</a>
+		<a href="/contato">Contato</a>
+		<a href="/admin">Administradores</a>
+		<a href="/novousu">Cadastre-se!</a>
+
+	</div>
+    <section>
+        {% block 'conteudo' %}
+        {% endblock %}
+    </section>
+    <div>
+		<footer>Copyright &reg; 2017 FBTec</footer>
+	</div>
+</body>
+</html>	

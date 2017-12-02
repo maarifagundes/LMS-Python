@@ -1,0 +1,39 @@
+
+	.titulo { /*Estilo utilizado nos locais com class="titulo".*/
+		text-align: center;
+		border-width: 1px;
+		border-style: solid;
+		border-color: black;
+	}
+
+	.foto {
+		max-width:100%;
+		height:150px;
+		overflow: hidden;
+	}
+	
+	/* Smartphone com 350px */
+@media only screen and (max-width : 350px) {
+	h1{
+		text-align: center;
+		overflow: hidden;
+	}
+	body{
+		font-size: 70%;
+		text-align: center;
+	}
+}
+
+
+	/* Tablet com 768px */
+@media only screen and (max-width : 768px) {
+	h1{
+		text-align: center;
+		overflow: hidden;
+	}
+	body{
+		text-align: center;
+
+		}
+	}
+}

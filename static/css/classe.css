@@ -1,0 +1,46 @@
+/*
+-ESTILOS UTILIZADOS EM TODAS AS PÁGINAS-
+*/
+header /*Estilo utilizado no cabeçalho.*/{
+	height: 100%;
+	width: 100%;
+	background: firebrick;
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+
+}
+
+header > img {
+	width: 100%;
+    height: 100%;
+    float: left;
+}
+
+header > h1 {
+	float: right;
+}
+
+
+footer /*Estilo utilizado no Rodapé.*/{
+	text-align: center;
+	background: lightgreen;
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+}
+
+body /*Estilo utilizado no corpo do site.*/{
+	background: firebrick;
+}
+
+a {  /*Estilo utilizado nas ancoras, de acordo com enunciado..*/
+	font-style: italic;
+	font-family: arial;
+}
+.menu {  /*Estilo utilizado nos locais com class="menu" */
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	width: 100%;
+}

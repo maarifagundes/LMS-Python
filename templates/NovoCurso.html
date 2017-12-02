@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'conteudo' %}  
+<h2>Novo Curso</h2>
+<form>
+	<label for = "profResp">Professor Responsável</label>:<br>
+	<input type= "text" name ="txtProfResp"><br>
+
+	<label for = "hrsMens">Digite a quantidade de horas mensais</label>:<br>
+	<input type= "number" name ="numHoras"><br>
+	
+	<label for = "DurAul">Duração da aula em horas</label>:<br>
+	<input type= "number" name ="numDurAul"><br>
+
+	<input type ="checkbox" value="ctkSeg" name="dSem" id="dSeg"><label for="dSeg">Segunda</label>
+	<input type ="checkbox" value="ctkTer" name="dSem" id="dTer"><label for="dTer">Terça</label>
+	<input type ="checkbox" value="ctkQua" name="dSem" id="dQua"><label for="dQua">Quarta</label>
+	<input type ="checkbox" value="ctkQui" name="dSem" id="dQui"><label for="dQui">Quinta</label>
+	<input type ="checkbox" value="ctkSex" name="dSem" id="dSex"><label for="dSex">Sexta</label><br>
+
+	<label for = "ementa">Ementa (Ou Conteúdo resumido)</label>:<br>
+	
+    <textarea name="txtConteudo">Insira conteúdo aqui:</textarea><br/> 
+
+   	<button type="submit" value="btnEnviar">Confirmar</button>
+</form>
+{% endblock %}

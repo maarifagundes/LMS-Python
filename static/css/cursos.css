@@ -1,0 +1,46 @@
+.foto { /*Estilo utilizado nos locais com class="titulo".*/
+		width: 33%;
+		height:150px;
+	}
+.foto2 { /*Estilo utilizado nos locais com class="titulo".*/
+		width:162px 
+	}
+.links {
+	text-align: center;
+	width: 400px;
+	height: 200px;
+}
+
+
+}
+@media only screen and (max-width : 350px) {
+	h1{
+		text-align: center;
+		overflow: hidden;
+	}
+	body{
+		font-size: 70%;
+		text-align: center;
+		background-color: red;
+	}
+}
+
+	/* Tablet com 768px */
+@media only screen and (max-width : 768px) {
+	h1{
+		text-align: center;
+		overflow: hidden;
+	}
+	body{
+		text-align: center;
+		font-size: 80%;
+	}
+	.links{
+		width: 60%;
+		height: 60%;
+	}
+	.local{
+		width: 60%;
+		height: 60%;
+	}
+}
